@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>還沒有很厲害的時候，人脈怎麼經營完整逐字稿</title>
+  <meta name="description" content="一燈在 UBO 社群晨間直播，從市場驗證、主揪角色、小群文化到借力專家，拆解還沒有很厲害時該怎麼經營人脈。">
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    .home-button { position: fixed; top: 14px; left: 14px; z-index: 10; display: inline-flex; align-items: center; min-height: 38px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--paper); color: var(--ink); font-weight: 800; text-decoration: none; box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+    .article { max-width: 980px; padding: 64px 0 72px; }
+    .article h1 { font-size: clamp(34px, 5vw, 62px); }
+    .article h2 { margin-top: 38px; color: var(--red); }
+    .article p, .article li { color: var(--ink); }
+    .note { padding: 16px 18px; border: 1px solid var(--line); border-radius: 8px; background: var(--soft-gold); color: #614615; }
+    .transcript-toc { margin: 28px 0 34px; padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: #fffdf8; }
+    .transcript-toc h2 { margin-top: 0; }
+    .toc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .toc-grid a { display: block; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); text-decoration: none; background: var(--paper); font-weight: 800; }
+    .toc-grid a:hover, .toc-grid a.is-active { border-color: var(--red); color: var(--red); background: #fff4ed; }
+    .transcript-row { display: grid; grid-template-columns: 92px 86px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); scroll-margin-top: 76px; }
+    .transcript-row:target, .transcript-row.is-current { border-color: var(--red); outline: 2px solid rgba(171, 65, 43, .26); outline-offset: 4px; background: #fff8ef; }
+    .transcript-row time { color: var(--green); font-weight: 900; }
+    .speaker { color: var(--red); font-weight: 900; }
+    .transcript-row p { margin: 0; }
+    .reader-tools { position: fixed; right: 18px; bottom: 18px; z-index: 12; display: grid; gap: 8px; width: min(360px, calc(100vw - 36px)); }
+    .current-marker, .back-to-toc { border: 1px solid var(--line); border-radius: 8px; background: var(--paper); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+    .current-marker { padding: 10px 12px; color: var(--ink); font-size: 14px; line-height: 1.45; }
+    .current-marker strong { display: block; color: var(--red); font-size: 13px; }
+    .back-to-toc { display: inline-flex; justify-content: center; padding: 10px 12px; color: var(--ink); font-weight: 900; text-decoration: none; }
+    .back-to-toc:hover { color: var(--red); border-color: var(--red); }
+    @media (max-width: 720px) { .home-button { position: sticky; top: 8px; margin: 8px 0 0 12px; } .article { padding-top: 28px; } .toc-grid { grid-template-columns: 1fr; } .transcript-row { grid-template-columns: 1fr; gap: 4px; } .reader-tools { right: 10px; bottom: 10px; width: calc(100vw - 20px); } }
+  </style>
+</head>
+<body>
+  <a class="home-button" href="../../">回首頁</a>
+  <main class="shell article" id="transcript-top">
+    <p class="kicker">UBO / 一燈內容總站</p>
+    <h1>還沒有很厲害的時候，人脈怎麼經營完整逐字稿</h1>
+    <p class="lead">2026-06-10 早上 UBO 社群直播，本機 Whisper 轉錄後整理為逐字稿時間軸。</p>
+    <p class="note">完整逐字稿依本機 Whisper large-v3-turbo 轉錄結果整理，已移除開場閒聊與結尾未完句，並修正常見錯詞。未做 speaker diarization，本頁以一燈為主要講者保守呈現。</p>
+    <nav class="transcript-toc" id="transcript-toc" aria-label="逐字稿目錄">
+      <h2>逐字稿目錄</h2>
+      <div class="toc-grid">
+        <a href="#t-000067">00:01:07｜回作業、找市場：從老二哲學到 AI Landing Page</a>
+<a href="#t-000388">00:06:28｜租場地不是小事：主揪其實是在累積人脈</a>
+<a href="#t-000652">00:10:52｜人脈不是炫耀，而是成為能解題的中間人</a>
+<a href="#t-000905">00:15:05｜小群比大群有力：門檻、文化與小組長會自己長出來</a>
+<a href="#t-001458">00:24:18｜主揪像班長：願意承擔的人，最容易變成人脈節點</a>
+<a href="#t-001827">00:30:27｜興趣群、媽媽群、工作坊：舒服的私域比硬撐商會更有力量</a>
+<a href="#t-002156">00:35:56｜借力專家、回到需求，再用 +1 驗證要不要做</a>
+      </div>
+    </nav>
+    <h2 id="transcript-body">逐字稿</h2>
+    <section class="transcript-row" id="t-000029"><time>00:00:29</time><strong class="speaker">一燈</strong><p>前幾天有寫這些心得的。所以說。老二哲學不是沒有創意。是懂得善用別人驗證市場的成果。沒錯。真正聰明的人不是什麼都自己試錯。一個對照。在自媒體的過程中。一開始總覺得要想出。全新的東西才有價值。後來瞭解許多熱門主題。早已有市場需求。真正重要的不是重新發明。而是用自己的觀點。故事和經驗重新詮釋。每一個人的生命歷程不同。</p></section>
+<section class="transcript-row" id="t-000067"><time>00:01:07</time><strong class="speaker">一燈</strong><p>展現出來的價值也會有很多。沒錯。這個真的是。經營自媒體的人。所有人。幾乎一開始最大的一個誤區。就是覺得自己要想出來。這個一個絕妙的點子。但事實上沒有人會在意這個點子。例如你這個舞蹈到底一開始是誰跳出來的。其實沒有人會在意這個東西。</p></section>
+<section class="transcript-row" id="t-000102"><time>00:01:42</time><strong class="speaker">一燈</strong><p>自媒體的這個邏輯它就是希望你去複製。然後不斷的有這個複製的效果才形成一個話題。形成一個趨勢。所以這個其實是更符合自媒體的邏輯的。但也不是叫你就要抄襲。一個主題你可以用你自己的觀點再重新去講述一遍吧。不是叫你去做抄襲。那做生意的邏輯也是這樣子。不要自己去憑空想像。</p></section>
+<section class="transcript-row" id="t-000138"><time>00:02:18</time><strong class="speaker">一燈</strong><p>去找已經經過市場驗證的再去做為創新。微修。這個行動建議你。再更清晰好執行一點點。這個行動比較抽象一些。讓它變成最小可以執行的一個碎片。好莫妮卡。我莫妮卡收穫非常多。我白結簡單看一下。</p></section>
+<section class="transcript-row" id="t-000171"><time>00:02:51</time><strong class="speaker">一燈</strong><p>她有講到她的收穫是蝦皮。蝦皮做這個市場驗證的一個方式。因為我在禮拜一的時候也有講到。蝦皮的商品怎麼樣做市場驗證。很多的生意其實真的都是這樣的道理。一樣的邏輯。先去從這些廣告投放啊。然後去看這個商品的競爭是如何。有多少人在搜尋。然後廣告板位你能夠排上第幾名。你才會知道它的競爭力道。</p></section>
+<section class="transcript-row" id="t-000208"><time>00:03:28</time><strong class="speaker">一燈</strong><p>大概是如何。知道競爭不多你才切入。既有市場競爭又不多。你才去嘗試做切入。才用嘗試去做去放大。對照什麼呢。最近在接觸國外的醫生。療癒師等等。所以很多人本身沒有專業。也有自己的故事和服務。但是他們的網站。Landing page。不一定有把價值講清楚。客人點進去之後。可能知道他是誰。但不一定馬上知道。</p></section>
+<section class="transcript-row" id="t-000239"><time>00:03:59</time><strong class="speaker">一燈</strong><p>所以最近做AI Landing page。不只是做漂亮畫面。而是在觀察這件事。需要更清楚。哦~了解。Monica這是一個非常好的方向。你先找到了可能有需求的人。甚至你直接幫他去試做一個。一個Landing page給他。然後你再去談這個生意。</p></section>
+<section class="transcript-row" id="t-000277"><time>00:04:37</time><strong class="speaker">一燈</strong><p>也都可以。因為他看到的東西。可能會更有想像的畫面。他今天做不出來這些東西。他可能就是。他的。他對這些東西。他沒有很強烈的概念。所以大部分的時候。問題跟痛點。其實是我們要幫他找到的。他其實不見得自己吃到自己的痛點。你也許。因為你做一個Landing page很快啊。AI一下子就生成出來。那你就直接可以拿這個Landing page跟他溝通。那你的這個案例會非常豐富。</p></section>
+<section class="transcript-row" id="t-000313"><time>00:05:13</time><strong class="speaker">一燈</strong><p>所以Monica這麼積極。是非常在很棒的一個方式跟方向。好。然後再看一下大家。Robin 早安。Yuna 早安。鬼燕 早安 真真 早安。大英 依依 早安。Mila 笛恩 早安 早安。那這個禮拜一的就回復完了。你們一定要寫這一些回饋。小心的。你才會真正變成自己的。不然禮拜一講完的東西你就忘記了。像是禮拜一我講這些蝦皮電商。</p></section>
+<section class="transcript-row" id="t-000350"><time>00:05:50</time><strong class="speaker">一燈</strong><p>做市場驗證的這些方式。你不做紀錄的話。真的一下就忘記了。但是它卻是。你做創業跟電商時候的底層邏輯。所以強烈鼓勵大家一定要寫這些東西。好。我們今天來聊聊一個主題。這個剛好是前幾天。我一個朋友。很久不見的朋友。他突然來我這邊找我吃飯。然後聊到他最近在租籃球場。租籃球場。</p></section>
+<section class="transcript-row" id="t-000388"><time>00:06:28</time><strong class="speaker">一燈</strong><p>大家有打過那種室內租借的籃球場嗎。有嗎。你或者不要說籃球場好了。羽球場網球場這些東西。有打過室內羽球網球籃球這一類。需要事先租借的場地的。你打個1。對。基本上這類的球場都不好借。都不好借。</p></section>
+<section class="transcript-row" id="t-000425"><time>00:07:05</time><strong class="speaker">一燈</strong><p>尤其是像籃球場。你臨時基本上是借不到的。你都要去抽籤的。因為太熱門了。你要先抽籤。所以你要借這些場地。借這種國小國中這個場地。你要抽籤之外。你其實還要當一個。有點像是一個主辦的角色。它是一個蠻需要責任感的一個主揪。你至少可能需要找個十幾個人。才能彈平租借的這個成本。然後我就想到。</p></section>
+<section class="transcript-row" id="t-000462"><time>00:07:42</time><strong class="speaker">一燈</strong><p>其實租場地。也是一個不錯的累積人脈的方式。你就成為了這個人脈的中間點。其實很多時候。大家誤以為人脈這件事情。累積需要你很強。你有某種特殊很強的能力。當然這是一種加分。但不見得你很會賺錢。你某個能力很強。你的人脈就會好。這個是。這不是雙向。它。你的能力強或你很會賺錢。是一種在經營人脈時後的加分屬性。但不是代表你有這些東西。</p></section>
+<section class="transcript-row" id="t-000500"><time>00:08:20</time><strong class="speaker">一燈</strong><p>你就有人脈。舉例來說。你看我們網路上那些。在曬自己的名車豪車的。不經意的露出個自己的保時捷 logo。然後說。喜歡自由自在的生活。下面是想要認識他的人脈嗎。沒有留言全部都在酸他。哈哈哈哈哈哈。底下留言我就會說什麼。啊。終於知道男生的綠茶是什麼。呵呵呵。類似這種。你知道嗎。所以。你有這些賺錢的能力啊什麼。不見得你的人脈就會強。</p></section>
+<section class="transcript-row" id="t-000538"><time>00:08:58</time><strong class="speaker">一燈</strong><p>大部分的時候啊。人脈不是靠。炫耀來的。而是你承擔了某一些角色。啊。累積信任來的。你不一定要當那個最有資源。最有錢。最有名。最有能力的那個人。或者是AI的這個趨勢上的能力。你可能也沒有。之前我教大家有一個方式。是趨勢上的知識或能力。這是一種累積人脈的能力的發展方式。你抓住最新的東西。然後就可以跟任何人去做資訊的交換。</p></section>
+<section class="transcript-row" id="t-000576"><time>00:09:36</time><strong class="speaker">一燈</strong><p>你做這個資訊落差的方式來去累積。那是一個方式。但是大部分的時候。可能沒有這種趨勢可以讓你去追。因為這種大趨勢啊。可能很久才會出現一次。像現在是有AI。大家很幸運。在這個AI的年代。所以大家只要去研究一下AI。你都有一些資訊落差。可以跟任何人去做交換。即使是一個大老闆。他可能也要跟你學習。因為你才有時間。一天到晚泡在這個上面去學。</p></section>
+<section class="transcript-row" id="t-000614"><time>00:10:14</time><strong class="speaker">一燈</strong><p>那在上一個呢。在上一個的大趨勢。趨勢可能會是區塊鏈。加密貨幣這些東西。所以已經多久了。已經。我靠已經4年前。5年前了。所以上一個大趨勢。已經4年前5年前了。那AI如果更普及的話。你下一個要等的大趨勢。你也不知道是什麼時候。所以不是。不是什麼時候都有這種大趨勢的資訊落差。你可以拿去累積你的人嗎。那還有什麼方法呢。其實你就當這個。除了這種對話的技巧。</p></section>
+<section class="transcript-row" id="t-000652"><time>00:10:52</time><strong class="speaker">一燈</strong><p>一對一的信任累積溝通之外。這個是大家都要練的基本功。我想除了這個東西之外。還能做什麼。其實就是你當這個把人聚集起來的人。把事情可以安排好的人。或者是這個主揪的角色。讓大家覺得。你做事很放心的。就樂。你就會成為。人與人之間的這個樞紐。所以。真正的人脈。我們是要讓別人信任我們。想到我們。甚至依賴我們。</p></section>
+<section class="transcript-row" id="t-000689"><time>00:11:29</time><strong class="speaker">一燈</strong><p>或者是會主動介紹我們。不是要讓大家去貪關係。而是教大家說。在你沒有。你這些能力的時候。沒有那麼賺那麼多錢的時候。你怎麼樣可以用一些低成本的方式。去累積信任。大家都知道人脈的本質。它其實。比起資源。它更多是信任。很多人會把這個人脈想的太功利。想的就是誰能幫我。其實它是一個雙向的信任。</p></section>
+<section class="transcript-row" id="t-000725"><time>00:12:05</time><strong class="speaker">一燈</strong><p>一個人願意相信你。通常不是因為你有多厲害。而是因為他覺得。這個人做事還蠻可靠的。這個人不會亂搞。這個人如果問他問題。他好像能給我答案。很多時候都是這樣子開始的。所以別人有問題來請教你的時候。就算這個問題你不知道。你也會幫他去找。等一下我幫你問問看誰誰誰。我認識誰誰誰。</p></section>
+<section class="transcript-row" id="t-000760"><time>00:12:40</time><strong class="speaker">一燈</strong><p>他可能會知道這件事情。你可以幫他解決這個問題。那這時候信任是產生在誰的身上。是產生在你的身上。還是產生在那個最終解決問題的。那個人的身上呢。其實最終這個問題。他的信任它是累積在你身上。因為你是真正解決他問題的人。所以這個就是中間人生意。我即使沒有做這件事情的能力。但我只要有能力找到。</p></section>
+<section class="transcript-row" id="t-000798"><time>00:13:18</time><strong class="speaker">一燈</strong><p>可以解決這個問題的人。最終信任還是累積在我身上。我再舉一個例子。可能會更明顯。今天可能在找這個事業有個火人的時候。這個投資人找到我。我就是一個很能夠處理各種事情。找到各種資源的人。那最終我幫他找到了一些人馬之後。那這個信任是累積在。是累積在這個我最終找到的人手上面。</p></section>
+<section class="transcript-row" id="t-000834"><time>00:13:54</time><strong class="speaker">一燈</strong><p>可能有一次是找這個活動主辦。你可不可以幫我找。好幫你找到了。欸 下一次就找到。欸 你有沒有這個工程師可以幫我找。欸 我又幫他找到了。好 最後。這些信任不是累積在這一些。最終底下辦活動的人身上。也不是辦在這個。不是累積在這個工程師身上。而是每一次他給我的問題。我都能夠解決。真正解決問題的人其實是我。我幫他解決了找到人的這個問題。所以其實我沒有這個能力。我也累積了信任。</p></section>
+<section class="transcript-row" id="t-000871"><time>00:14:31</time><strong class="speaker">一燈</strong><p>那他最終要找合作對象的時候。他其實第一時間找到的會是我。因為誰我都能幫他解決問題。這個就是屬於主揪。還有屬於人脈樞紐的信任累積方式。看到。所以別人今天有問題來請教你的時候。你千萬不要因為。欸 這件事你怎麼會問我。喔 呃 北七友你不會去問網路。什麼的。欸 那你就錯失了一個。累積信任的機會。啊 所以不要錯過這種機會。就算你不知道你也去問。欸 除非一種狀況。</p></section>
+<section class="transcript-row" id="t-000905"><time>00:15:05</time><strong class="speaker">一燈</strong><p>你根本不想跟他累積信任關係。那當然。那當然你不用浪費時間。啊。那種 伸手牌什麼的。啊 那你當然不需要浪費時間。但假設你覺得這個人啊。值得這個深交一下。值得發展一下你們的這個信任關係的話。他問什麼問題。你盡力去幫他解決。你不會的你也。你也先去學一下。你你不知道的你也去問一下有沒有人會。啊。所以成為主揪這件事情。</p></section>
+<section class="transcript-row" id="t-000939"><time>00:15:39</time><strong class="speaker">一燈</strong><p>其實是一個很好累積信任的方式。嗯 所以你就想看看身邊這一些。這個很會當主揪的人。是不是你有什麼樣想要參加活動。想要辦的活動啊。其實你更多會先問他。因為你知道他能把人聚集起來。他能把事情辦好。其實這就是一種信任。而有一天他問你。他問你要參加什麼東西的時候。要不要去露營啊之類的時候呢。</p></section>
+<section class="transcript-row" id="t-000975"><time>00:16:15</time><strong class="speaker">一燈</strong><p>也因為你多次對他的信任。他對你其實已經有一定的影響力了。啊。所以啊 你可以當什麼。其實不一定要。要那麼複雜。你今天可以從你自己喜歡的東西開始。例如 我們的群裡有一些群友。像家安。他就是一個很喜歡健身的人。像吞吞也是喜歡健身的人。那你就可以當健身的主揪啊。像家安一天到晚他只要去健身。他就會拍張自拍照。然後是秀出他的大肌肉。然後又tag一些人。</p></section>
+<section class="transcript-row" id="t-001012"><time>00:16:52</time><strong class="speaker">一燈</strong><p>呵呵 說該健身了吧。也ok啊。其實你就可以做大家的主揪。你去成立一個群組。然後呢 督促大家去健身。你做一個監督者的角色。然後你要定下一些規矩哦。你一定要可能一個月有出現一次。我才會幫你留在這個群組。所以留在群組的人。他會有一種自我督促力。再來也會讓這個群組啊更活化。我是花了一些時間才了解到群組這件事情不是人越多越好。</p></section>
+<section class="transcript-row" id="t-001048"><time>00:17:28</time><strong class="speaker">一燈</strong><p>像是之前我一下子就把我的這個群。幾乎是一個月以內的時間他就增加到了快1000人了。但是群多。群裡面的人多不見得有幫助哦。因為我1000人的時候。我早上直播其實也是二三十人。你看我踢掉了800個人之後。直播也是二三十個人。真正會參與的人其實就是那一票。其他這些幽靈人口。在群組裡面但是不會看的。其實你根本就把它踢掉都沒差。</p></section>
+<section class="transcript-row" id="t-001086"><time>00:18:06</time><strong class="speaker">一燈</strong><p>你需要設下一些規矩去做一些篩選門檻。篩出真正會參與的人。不然這些不會參與的人他會帶來負面的效果。什麼負面的效果。例如已讀不回。十個人裡面假設有三個人開始已讀不回。他就會在這個群組裡面種下一個文化。我可以不回復我可以不參與。所以他對其他正在參與的人。其實是一個向下拉扯的力量。所以你必須要在你的這些群組裡面。</p></section>
+<section class="transcript-row" id="t-001122"><time>00:18:42</time><strong class="speaker">一燈</strong><p>設下一些門檻去做篩選。沒有達到的話你就要把它移除掉。不然他長久會種下一個不參與的負面因子。負面因素。這群不是越多越好。多了也吵。一堆這個。抓七 雜八的討論也在上面展開。那認真想要參與的人。反而覺得這個群組順選。怎麼那麼多好潮看不完就不會回復了。但是我們一開始生活之中。我們沒有做自媒體的話。只是生活之中這些朋友開始去聚的話。</p></section>
+<section class="transcript-row" id="t-001160"><time>00:19:20</time><strong class="speaker">一燈</strong><p>其實十個人以下。甚至十五個人以下。我覺得都是非常非常好經營的這個模式。非常會有向心力。然後你的文化先塑造了。然後你剛剛這個健身團舉例的話。然後開始會有人複製你。開始會像你一樣去take其他人。說該健身了吧。那這個時候就複製下去了。這個經營者的角色。也等於你底下又多了一個可以幫你管事。</p></section>
+<section class="transcript-row" id="t-001198"><time>00:19:58</time><strong class="speaker">一燈</strong><p>幫你盯著別人。幫你take別人的這個小組長。這時候就組織就複製下去了。你以這個公司運營來看的話。你就培訓出了大主管。所以即使是這種小群組。十個人。十五個人的群組。你一樣也可以用公司經營的角度。來去思考。那這種時候。就開始出現。這個佳安。這個。我有一個朋友也住附近。他也蠻想要健身的。你覺得我可以邀請他嗎。</p></section>
+<section class="transcript-row" id="t-001234"><time>00:20:34</time><strong class="speaker">一燈</strong><p>邀他一起進群組嗎。可以啊。但是我們的規矩想講清楚。一個月一定要進健身房一次。就算沒有跟大家聚在一起。你也要take一張自拍上傳。上傳限時動態。這個規矩定了之後。健身團的文化就確立了下來。人就自動開始裂變了。有了核心人群跟有了文化。那後面再有人進來的時候。</p></section>
+<section class="transcript-row" id="t-001272"><time>00:21:12</time><strong class="speaker">一燈</strong><p>他就變成你自然而然的人脈。所以我不需要我身邊都是一票健身的人。或者我要去感染那些。我身邊這個百年不運動。小腿上面一點肌肉都沒有的這些人。我不需要去這個撼動他們。要他們去健身。我只要去聚集好幾個。我身邊真的會跟我一起健身的朋友。文化確立起來。規則確立起來後面他就可以自然而然再發展下去了。而這些就是你新的人脈。</p></section>
+<section class="transcript-row" id="t-001310"><time>00:21:50</time><strong class="speaker">一燈</strong><p>他就是你新的流量。所以我常常去講你有這些限下能力的人。你是不需要做短影音的。因為這樣子發展起來的人脈。他的信任其實初始信任就非常高。你要做任何事情。例如你要再去揸一個什麼東西。都更簡單。例如你再去說。我最近發現這個。這個醫療錢很重要。意外錢很重要。我上次健身就是不小心。這個肩膀受傷了。結果我去找醫生。那我發現居然能夠核銷。</p></section>
+<section class="transcript-row" id="t-001347"><time>00:22:27</time><strong class="speaker">一燈</strong><p>我居然看這些醫生都不用錢。而且甚至還有一點賺錢。我發現我們健身很需要這些東西。你看這時候你推這些醫療錢。意外錢有很難嗎。沒有啊。甚至你不一定要有這個保險執照。你只要跟這個保險的朋友配合。就說我幫你推。你回用給我多少多少。給我一半的回用就好。這種時候你什麼生意其實都可以做。你只要有了人。人賣就是錢賣嘛。那重點是你要對這些人有影響力。那你再說。最近發現吃這個魚油很有效耶。</p></section>
+<section class="transcript-row" id="t-001385"><time>00:23:05</time><strong class="speaker">一燈</strong><p>我發現這個我原本在痛的這個肩膀。好像因為魚油這個消炎的效果。就覺得舒服了很多。你看要不要一起我們糾葛團購。大家一起拿便宜。這種時候你也可以賣這些東西啊。所以你只要成為了這個主糾。比如說你掌握這些人脈。有信任人群的人脈。這個比短影音上面。你有一千粉兩千粉的增加。還要有效的多。你多了一個這樣群體裡面的人。比你粉絲增長一千還要有用。因為這一千個人可能限時動態。</p></section>
+<section class="transcript-row" id="t-001421"><time>00:23:41</time><strong class="speaker">一燈</strong><p>看你一兩次。他就不會再看到你了。那些都是舒服的。但沒有進入信任。我們講事業的原則。第一原則是流量信任成交嘛。所以流量沒有變成信任的名單的話。這些流量就沒有什麼用。這個是現在短影音啊。這些東西的困難點。那你還可以做什麼東西。像是我剛剛講的羽球嘛。網球這些的主糾。甚至籃球場的這些主糾。你想不想要打室內。但室內的場不是隨時都會有啊。</p></section>
+<section class="transcript-row" id="t-001458"><time>00:24:18</time><strong class="speaker">一燈</strong><p>那你就會想要來問我。你現在還有沒有可以參加的。因為他知道你是一個。每一季你都會去抽球場的人。只要有這些需求。甚至我朋友也想打羽球。我可以參加嗎。他就進了這個羽球團。所以這些球場的這些。會抽籤的這個主糾。他也很像是一個辦商會的這種感覺。你就像是這個商會的這個會長。大家想要打這個球。得問一下你。因為你才有好的球場。我覺得我之前有遇到一個人。</p></section>
+<section class="transcript-row" id="t-001494"><time>00:24:54</time><strong class="speaker">一燈</strong><p>他每一季會抽三四個球場。這種羽球球場。所以他掌握了很多大台北地區。想要打羽球的人的人脈。所有人都要來問他。這也是一個方式啊。那這些東西。最好是從你的這個興趣去延伸。你才會有力量。你才會真正自己參與在裡面。所以像是什麼。所以像是吞吞。你可以做讀書會啊。讀書會這些東西之前有做過。那你有沒有把它變成一個。</p></section>
+<section class="transcript-row" id="t-001530"><time>00:25:30</time><strong class="speaker">一燈</strong><p>社群去經營呢。變成一個群體去經營呢。其實都有這些情力的。例如你現在在學AI。你不一定是很厲害的啊。像之前。我有一個朋友。他是新竹的工程師。他就想要看我們討論這些。AI agent的東西。他就想要學。然後學了一點點之後。他就開始在催揪人說。有沒有人也想要一起。討論一起學這些東西。然後他就成為了主揪啊。然後很輕鬆可以救到人。吹上面很好揪人的。所以其實啊。</p></section>
+<section class="transcript-row" id="t-001566"><time>00:26:06</time><strong class="speaker">一燈</strong><p>你一開始不需要比大家厲害。你只要比大家更願意承擔麻煩。就是這個場地怎麼處理。大部分的人其實都想要參與。但是不想要負責。你只要願意去負責這些。像是場地啊。時間啊這些東西。你承擔下來的時候。你就會成為這個樞紐。誰願意多比別人做一點。你就會成為這個節點。所以主揪啊。通常不是那個最厲害的人。但主揪是最願意承擔責任的人。這個其實大家都有經歷過。</p></section>
+<section class="transcript-row" id="t-001604"><time>00:26:44</time><strong class="speaker">一燈</strong><p>這個人是什麼呢。就是小時候。我們不是班上都會有班長嗎。班長其實就是這種人脈杠杆的原型。他不一定是成績最好的人。雖然常常會是成績最好的人。因為這老師點名的。但是呢。也很多時候你會發現。他不是那個成績最好的人。有很多時候他就是那個。人蠻好的那個人。他是蠻願意承擔的這個人。老師會找他。同學也會找他。</p></section>
+<section class="transcript-row" id="t-001639"><time>00:27:19</time><strong class="speaker">一燈</strong><p>學校訓導主任有事也是找他。那他自然會知道更多的資訊。接觸更多的人。而且你會發現哦。班長是整個班級裡面。唯一能對上的人。你要找訓導主任只有班長認識。你要找其他科的老師只有班長認識。所以承擔更多的人是更有機會去跨越階級的。但是你作為一個班長的學生。你是比較難直接找到訓導主任。學務主任這些角色的人。</p></section>
+<section class="transcript-row" id="t-001677"><time>00:27:57</time><strong class="speaker">一燈</strong><p>但是班長可能常常要去跟他們接觸。甚至幫他們搬東西等等的。所以他們能夠接觸到。所以今天可能要討論什麼活動啊。什麼的時候呢。他你就必須要透過班長。你才能夠去傳達這個資訊。其實長大之後就有非常多這樣的一個。角色的原型。你只要願意去承擔這樣的一個角色。你就可以獲得更多的人脈樞紐的這些節點。以及信任的節點。甚至有機會用這樣的一個群體。再去對上。對一些你原本。</p></section>
+<section class="transcript-row" id="t-001713"><time>00:28:33</time><strong class="speaker">一燈</strong><p>沒有辦法靠自己去對到的人。有哪些東西。除了剛剛講的這些球場。或者讀書會的發起人。大家還沒有想到。還有什麼東西。我們來及時廣益一下。你想一下。還有沒有類似在我們出社會之後。還有沒有類似這些角色。你可以從你自己興趣。或你自己生活周遭去想看看。我們來及時廣益想一下。我這裡也是有想到幾個。我們來看一下我們還有什麼事情能做。所以不見得你一定要去拓展人們。你就要去參加商會哦。</p></section>
+<section class="transcript-row" id="t-001751"><time>00:29:11</time><strong class="speaker">一燈</strong><p>你每週三早上六點還要起來。比我們還更早。早兩個小時。那個不容易哦。然後例如BMI你是要早起嘛。然後去這個獅子會。你是要喝酒。喝超多的酒。然後你要捐一大堆的錢。我前陣子才有一個這個認識的人。他當上了獅子會的會長。你要當上那個會長。你要捐非常多的錢哦。然後你要當這個統整很多會長的人。你要捐更多的錢哦。那個都要花幾十萬哦。所以。以前不懂的時候會覺得。</p></section>
+<section class="transcript-row" id="t-001789"><time>00:29:49</time><strong class="speaker">一燈</strong><p>獅子會會長好像很厲害。哇。但是懂了之後。懂他們文化之後會覺得哇。佩服佩服。這個時候非常多錢。而且一聽到人要喝酒了。Rumi說之前參加過喝水的群組。呵呵呵呵。所以喝水你看。其實是生活中的一個小事。也可以成為一個群組。喝水的群組我就沒有想過。因為我也是喝水不夠的人。所以很多東西是可以成為群組。你可以去累積人。但是當然。這種。</p></section>
+<section class="transcript-row" id="t-001827"><time>00:30:27</time><strong class="speaker">一燈</strong><p>呃。連結。喝水可能連結它就比較弱。它的一個必要性就比較低。那你要透過這個東西去累積信任。相對來說難度也會高一點點。啊。還有沒有。大家有沒有想到。有沒有什麼其他的東西。是有可能這樣子。社群化、群組化。啊。甚至它可能有一個主揪的。啊。一點說。你可以透過自己主辦活動、課程。好玩的。呃。這是點來吸引人脈。因為我之前開過自我探索。占星的工作坊。啊。很棒啦。這個就很棒。啊。</p></section>
+<section class="transcript-row" id="t-001865"><time>00:31:05</time><strong class="speaker">一燈</strong><p>這個就很棒。所以你每一個興趣。其實都有機會。成為這種。這種節點。啊。小明說。這只會真的喝太多酒了。呵呵這個就是。呃。一看就知道。呃。有體悟。有有稍微接觸過的。啊。而且還不一定會上。呃。獅子會。大家如果不知道的話。其實啊。獅子會的會長是一個很很死的坑。首先真正很厲害的人。是不會想要當那個會長。啊。大家去獅子會很多都是。都是為了。為了人脈。然後它裡面也確實有一些。</p></section>
+<section class="transcript-row" id="t-001903"><time>00:31:43</time><strong class="speaker">一燈</strong><p>真的很厲害的老闆。真的很厲害。然後年紀都很大。啊。然後呢。他們。就不會去當這個會長的角色。因為。因為它不需要去當這個人脈的。一些節點。去承擔這些事情。人家也會找它。因為大家知道它厲害。那你想要去獲得更多的。這些人脈資源呢。你就要去競爭那個會長的角色。承擔更多的責任。一天到來要去辦各種的聚會。呃。各各種喝酒的會。然後有要捐錢的時候。你要第一個跳出來捐錢。啊。你才能夠獲得這些大佬的關注。</p></section>
+<section class="transcript-row" id="t-001939"><time>00:32:19</time><strong class="speaker">一燈</strong><p>所以是非常非常辛苦的。你其實不一定要。很多人他其實沒有那個屁股。硬要坐上那個位置。那你可能。你可能也許做保險之類的。你為了要多一些保險的業績。你硬搭上了這個角色。結果賺沒有沒有十幾萬。但是你捐的錢。喝的酒錢。早就超過那十幾萬了。其實得不償失。啊。我們去承擔這個角色。人脈節點。樞紐的角色。其實也要看一下自己。適不適合。做不做得住。那吃著會。會長這個角色。可能就不是那麼適合。</p></section>
+<section class="transcript-row" id="t-001975"><time>00:32:55</time><strong class="speaker">一燈</strong><p>我那個朋友。啊。但他硬坐上去。他就很痛苦。那你不一定要去這些會。你會發現你生活中有很多東西。都可以做出類似的群組。而且是跟你的興趣更有關的。你會做得更舒服。沐浴拉就是說。一起打卡找稅。這個也很棒啊。一起打卡找稅。然後呢。你如果真的要有一些什麼。商業化的這個導流。因為最終我們還是希望。我們能夠有所收穫嘛。一起打卡找稅。然後我最近發現一個群組。</p></section>
+<section class="transcript-row" id="t-002012"><time>00:33:32</time><strong class="speaker">一燈</strong><p>早上八點一起會聊這些商業邏輯。我覺得很棒。也介紹給這個群裡面的朋友。哎。結果也有導流。那我們社群。如果之後做這個school 的訂閱付費的話。哇。你也有這個參與獎。啊。你也有這個後藝。所以好多東西都可以做這些收費的。這個路径的。感恩日記群。然後這個是。這個也是。不只是能量學在做這件事情。其實很多人都有寫。都有寫這一些。這個每日感恩日記的習慣。Wendy說媽媽相關的群組。</p></section>
+<section class="transcript-row" id="t-002047"><time>00:34:07</time><strong class="speaker">一燈</strong><p>教學資源 育兒資源等等。這個也很棒啊。你就可以邀請什麼。邀請依依。因為依依就是這個幼兒教育的專家。我們群裡面的幼兒教育最專家。最專業的就是依依了。然後就可以邀請他。或者。你有什麼問題的時候。你就可以在這個UBO。假設他沒有進群。你就可以在UBO裡面去跟依依請教。所以群裡面的媽媽有什麼問題。不知道怎麼選這個幼兒園。哎。你也不是很清楚。但可以怎麼樣。你跟他說哎。</p></section>
+<section class="transcript-row" id="t-002082"><time>00:34:42</time><strong class="speaker">一燈</strong><p>這個陳媽媽。你等我一下。我有認識一個很厲害。幼兒教育專業的碩士。這個國家相關的幼兒研究。也會找他的專業研究員。我去請教一下這個問題。然後你就跑來這個UBO群組。這個EE說EEE。拜託拜託。我可以請教你這個問題。然後你很禮貌的話。其實啊。擁有這些資訊知識的人是很樂意分享的。</p></section>
+<section class="transcript-row" id="t-002118"><time>00:35:18</time><strong class="speaker">一燈</strong><p>像是你有這些幼兒相關的問題。你真正這個有禮貌。誠心跟意義發問。其實他是一個非常樂意分享這些資訊的人。哎。你問他了之後。又立刻再去回覆這個。你群組裡面的這個陳媽媽的問題。告訴他。我剛剛問了一個專家。他說。幼兒園我們可以怎麼怎麼選。所以。你不一定要把自己包裝成一個超厲害專家的角色。你只要別人有問題的時候。你可以問得到。那你也不一定需要成為這個專家。</p></section>
+<section class="transcript-row" id="t-002156"><time>00:35:56</time><strong class="speaker">一燈</strong><p>你也可以擁有專家所產生的信任。這個就叫做借利。你先做保險。你當學。你也不會這些專業。但是你會累積。例如你就有一個媽媽群組好了。你可以累積這些信任。然後你有一天你就借利說。哎我發現。小孩的這些保險規劃也很重要。是出生之前我們就可以開始先規劃的。不然要是這個小孩在這個。日本以前有一個說法說。7歲以前的小孩都是交由神明館。</p></section>
+<section class="transcript-row" id="t-002194"><time>00:36:34</time><strong class="speaker">一燈</strong><p>因為以前。7歲以前的小孩非常容易夭折。7歲以前所以是交給神明館。交給天助地。然後我們小孩一定要先做好這些保險的規劃。不然出了什麼事情。我們可能難以負擔。我有認識一個專家。他非常會做這些育兒相關的保險規劃。你就把你的保險的主管介紹給他。我也是當初為了學這些東西。我就自己去報了一個。報了一個保險。然後去學習。我為了我的小孩學。</p></section>
+<section class="transcript-row" id="t-002232"><time>00:37:12</time><strong class="speaker">一燈</strong><p>但你不一定要像跟我這樣。你可以直接跟我的主管請教就好。我可以幫你拉一個群組。你可以直接問他。這種時候就是借利嘛。你也不需要有這些真正的專業。所以我們是。大家都誤以為你要非常有這個專業能力。你才能做成這些事情。例如你才能有保險相關的銷售。不是。其實是你要有人與人之間的信任。這個才是真正的資產。</p></section>
+<section class="transcript-row" id="t-002268"><time>00:37:48</time><strong class="speaker">一燈</strong><p>今天教大家這種社群經營的這些方式。你要真正站在他們的角度去解決問題。所以我剛剛在做介紹的時候。你會發現。我其實都還是按照這些人的需求去做介紹。我不會在一個媽媽群組硬跟他說。說什麼。你可以來兼職保險。有一個被動收入。怎樣怎樣的。這種就是拉人的方式。你沒有站在他的角度。你要站在他的角度。先去思考他的痛點。他的需求是什麼。你有一個他舒服。然後你自己講出來也舒服的方式。</p></section>
+<section class="transcript-row" id="t-002305"><time>00:38:25</time><strong class="speaker">一燈</strong><p>還有真的被拒絕。也不會有人覺得不好意思的方式。去做邀約。這是最基本的。所以今天教大家這一些。從自己的興趣。樞紐這些去做一個群體的方式。我還想到一個東西忘了跟大家講。這也是大家可能沒有意識到。在我們出了社會之後。還不錯的一個人脈樞紐。就是社區主委。社區主委。你的社區人如果比較多的話。你會發現我社區主委真的是事情很多。但是你真的做得好的話。</p></section>
+<section class="transcript-row" id="t-002341"><time>00:39:01</time><strong class="speaker">一燈</strong><p>整個社區的人都是你的人脈資源。你就像是一個巨型的班長。那社區搞不好一兩百戶。哇。那你掌握了這一兩百戶。這個服務的機會。這其實也是一個。如果你不知道怎麼做的話。也是一個很不錯的機會。所以你會發現。其實生活中有非常多類似這種。商會會長的概念。只是你一直沒有意識到。</p></section>
+<section class="transcript-row" id="t-002375"><time>00:39:35</time><strong class="speaker">一燈</strong><p>而其他的這些選擇。搞不好有更多是你做起來會更舒服的。所以你不一定要追求去這些商會。才可以累積人脈。我們生活中有非常非常多這些機會。其實這些東西就是私域。你做社區主委。陳媽媽你這個問題。你私訊我。這個就進入了私域。我作為這個兩百人社群的主委。我有一個兩百人社群。這個兩百人社群就是我的私域。</p></section>
+<section class="transcript-row" id="t-002412"><time>00:40:12</time><strong class="speaker">一燈</strong><p>所以我們私域是有非常多種經營的方式。不是只有做自媒體短影音。然後導到你的Line @。導到你的Email。那個才叫私域。那個思維太狹隘了。所以今天我們介紹這樣的方式。大家可以去思考。你有沒有什麼東西。是有機會成為這個人脈樞紐。人脈節點的。你就可以開始累積信任。最終累積影響力。而這一群人。你要帶去哪裡做任何的生意。其實都很有機會。</p></section>
+<section class="transcript-row" id="t-002449"><time>00:40:49</time><strong class="speaker">一燈</strong><p>我們可以多去思考一下。那莫妮卡幫我聽一下。這個今天的一個收穫一個對照。還有一個行動。我們可以好好去思考看看。你不一定要是你的興趣或你的專業。像剛剛也有人貼說。喝水群組也可以啊。你今天想要完成什麼事情。你有什麼目標。你也可以揪啊。你在你的這個。在你的自己的IG揪啊。然後你IG喊話說。有沒有人也想要喝水被督促的。可以互相督促的。有的話打一個+1。我們來成立這個群組。</p></section>
+<section class="transcript-row" id="t-002483"><time>00:41:23</time><strong class="speaker">一燈</strong><p>這個是什麼。這個就是禮拜一我講的。市場調查。所以萬一你成立。你在自媒體上面。你也許朋友。IG有個300個。平常會有100個人看你的限時動態。然後你喊出這個東西之後。你發現一個人都沒有回覆你。你就不要成立這個群組了。代表市場調查沒有意願。呵呵呵。你就不用硬尬。你就下次做出一個。大家會喊+1+1的。你再來做這個群組。所以再結合禮拜一我們講的。市場調查這件事情嘛。</p></section>
+<section class="transcript-row" id="t-002515"><time>00:41:55</time><strong class="speaker">一燈</strong><p>去做最小的樣本抽查。連你的IG都沒有人喊話跟你回覆了。300個人裡面一個都沒有+1。那你就先不要做了。代表可能沒有人會呼應你。沒有人會回應你。你當然做還是先做這些。有人會回應你。有人想+1的嘛。好。今天分享。</p></section>
+  </main>
+  <div class="reader-tools" aria-label="閱讀輔助">
+    <div class="current-marker" id="current-marker" aria-live="polite">
+      <strong>目前段落</strong>
+      <span>00:01:07｜回作業、找市場：從老二哲學到 AI Landing Page</span>
+    </div>
+    <a class="back-to-toc" href="#transcript-toc">回逐字稿目錄</a>
+  </div>
+  <script>
+    (() => {
+      const rows = Array.from(document.querySelectorAll('.transcript-row'));
+      const tocLinks = Array.from(document.querySelectorAll('.toc-grid a'));
+      const markerText = document.querySelector('#current-marker span');
+      const chapters = tocLinks
+        .map((link) => {
+          const target = document.querySelector(link.getAttribute('href'));
+          return target ? { link, target, title: link.textContent.trim() } : null;
+        })
+        .filter(Boolean);
+
+      function chapterFor(row) {
+        let current = chapters[0];
+        for (const chapter of chapters) {
+          if (chapter.target.offsetTop <= row.offsetTop + 2) current = chapter;
+        }
+        return current;
+      }
+
+      function setCurrent(row) {
+        if (!row) return;
+        rows.forEach((item) => item.classList.toggle('is-current', item === row));
+        const chapter = chapterFor(row);
+        tocLinks.forEach((link) => link.classList.toggle('is-active', chapter && link === chapter.link));
+        const time = row.querySelector('time')?.textContent.trim() || '';
+        const speaker = row.querySelector('.speaker')?.textContent.trim() || '';
+        markerText.textContent = `${time}｜${speaker}｜${chapter ? chapter.title.replace(/^[^｜]+｜/, '') : '逐字稿'}`;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible[0]) setCurrent(visible[0].target);
+      }, { rootMargin: '-18% 0px -70% 0px', threshold: [0, 0.2, 0.6] });
+
+      rows.forEach((row) => observer.observe(row));
+      window.addEventListener('hashchange', () => setCurrent(document.querySelector(location.hash)));
+      setCurrent(document.querySelector(location.hash) || rows[0]);
+    })();
+  </script>
+</body>
+</html>

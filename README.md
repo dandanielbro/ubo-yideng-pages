@@ -12,6 +12,8 @@
 
 ## 目前收錄
 
+- `events/2026-06-10-community-live-network-hub/`：還沒有很厲害的時候，人脈怎麼經營
+- `transcripts/2026-06-10-community-live-network-hub/`：還沒有很厲害的時候，人脈怎麼經營（完整逐字稿）
 - `events/2026-05-24-business-mindset/`：一燈商業思維線下聚整理版
 - `transcripts/2026-05-24-business-mindset/`：一燈商業思維線下聚完整逐字稿
 
